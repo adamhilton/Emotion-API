@@ -2,5 +2,8 @@
 # Emotion-API
 .Net library that wraps the Microsoft [Emotion API](https://www.projectoxford.ai/doc/Emotion/overview). for easier, simpler use inside your .Net application.
 
+###Documentation
+Coming soon...
+
 ###License
 Licensed under the MIT License
