@@ -13,7 +13,7 @@ cache:
   - C:\Users\appveyor\AppData\Local\NuGet\Cache
 
 # version format
-version: {build}
+version: 1.0.{build}
 
 #---------------------------------#
 #    environment configuration    #
