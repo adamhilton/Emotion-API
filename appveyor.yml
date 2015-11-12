@@ -1,43 +1,16 @@
-# Notes:
-#   - Minimal appveyor.yml file is an empty file. All sections are optional.
-#   - Indent each level of configuration with 2 spaces. Do not use tabs!
-#   - All section names are case-sensitive.
-#   - Section names should be unique on each level.
+version: 1.0.0.{build}.{branch}
 
-#---------------------------------#
-#      general configuration      #
-#---------------------------------#
+init:
+  - git config --global core.autocrlf true
+  
+install:
+ - cmd: nuget sources add -Name api.nuget.org -Source https://api.nuget.org/v3/index.json
 
-# Retain the NuGet package cache between builds
-cache:
-  - C:\Users\appveyor\AppData\Local\NuGet\Cache
+before_build:
+ - ps: "&{$Branch='dev';iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.ps1'))}"
+ - cmd: dnvm install 1.0.0-beta8
+ - cmd: dnvm upgrade
+ - cmd: dnvm update-self
+ - cmd: dnvm list
+ - cmd: dnvm use 1.0.0-beta8
 
-# version format
-version: 1.0.{build}
-
-#---------------------------------#
-#    environment configuration    #
-#---------------------------------#
-
-# http://blog.appveyor.com/2014/06/04/shallow-clone-for-git-repositories/
-shallow_clone: true
-
-#---------------------------------#
-#       build configuration       #
-#---------------------------------#
-
-# build Configuration, i.e. Debug, Release, etc.
-configuration: Release
-
-build:
-  project: EmotionAPI\EmotionAPI.sln
-
-  # MSBuild verbosity level
-  verbosity: minimal
-
-# scripts to run before build
-before_build: nuget restore EmotionAPI\EmotionAPI.sln
-
-#---------------------------------#
-#       tests configuration       #
-#---------------------------------#
