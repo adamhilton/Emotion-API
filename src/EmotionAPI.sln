@@ -10,9 +10,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		global.json = global.json
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "EmotionAPI", "src\EmotionAPI\EmotionAPI.xproj", "{BEA5D041-5808-4149-A38F-6E337B632228}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "EmotionAPI", "EmotionAPI\EmotionAPI.xproj", "{BEA5D041-5808-4149-A38F-6E337B632228}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmotionAPI.Tests", "src\EmotionAPI.Tests\EmotionAPI.Tests.csproj", "{F0696584-9E80-49A5-A6CC-D2B664DD0E7D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmotionAPI.Tests", "EmotionAPI.Tests\EmotionAPI.Tests.csproj", "{F0696584-9E80-49A5-A6CC-D2B664DD0E7D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
