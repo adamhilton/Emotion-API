@@ -1,0 +1,7 @@
+﻿
+namespace EmotionAPI
+{
+    interface IEmotionAPIResponse
+    {
+    }
+}
