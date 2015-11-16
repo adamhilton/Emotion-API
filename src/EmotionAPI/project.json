@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0-*",
   "description": "EmotionAPI Class Library",
-  "authors": [ "Adam" ],
+  "authors": [ "Adam Hilton" ],
   "tags": [ "" ],
-  "projectUrl": "",
-  "licenseUrl": "",
+  "projectUrl": "https://github.com/Felsig/Emotion-API",
+  "licenseUrl": "https://github.com/Felsig/Emotion-API/blob/master/LICENSE",
 
   "frameworks": {
     "dnx451": {
