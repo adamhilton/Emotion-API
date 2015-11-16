@@ -243,6 +243,9 @@
           "lib/dnx451/xunit.execution.dotnet.dll": {}
         }
       },
+      "xunit.runner.console/2.1.0": {
+        "type": "package"
+      },
       "xunit.runner.dnx/2.1.0-beta6-build191": {
         "type": "package",
         "dependencies": {
@@ -1185,6 +1188,9 @@
           "lib/dotnet/xunit.execution.dotnet.dll": {}
         }
       },
+      "xunit.runner.console/2.1.0": {
+        "type": "package"
+      },
       "xunit.runner.dnx/2.1.0-beta6-build191": {
         "type": "package",
         "dependencies": {
@@ -1501,6 +1507,9 @@
           "lib/dnx451/xunit.execution.dotnet.dll": {}
         }
       },
+      "xunit.runner.console/2.1.0": {
+        "type": "package"
+      },
       "xunit.runner.dnx/2.1.0-beta6-build191": {
         "type": "package",
         "dependencies": {
@@ -1800,6 +1809,9 @@
         "runtime": {
           "lib/dnx451/xunit.execution.dotnet.dll": {}
         }
+      },
+      "xunit.runner.console/2.1.0": {
+        "type": "package"
       },
       "xunit.runner.dnx/2.1.0-beta6-build191": {
         "type": "package",
@@ -3078,6 +3090,9 @@
         "runtime": {
           "lib/dotnet/xunit.execution.dotnet.dll": {}
         }
+      },
+      "xunit.runner.console/2.1.0": {
+        "type": "package"
       },
       "xunit.runner.dnx/2.1.0-beta6-build191": {
         "type": "package",
@@ -4372,6 +4387,9 @@
         "runtime": {
           "lib/dotnet/xunit.execution.dotnet.dll": {}
         }
+      },
+      "xunit.runner.console/2.1.0": {
+        "type": "package"
       },
       "xunit.runner.dnx/2.1.0-beta6-build191": {
         "type": "package",
@@ -6793,6 +6811,25 @@
         "xunit.extensibility.execution.nuspec"
       ]
     },
+    "xunit.runner.console/2.1.0": {
+      "type": "package",
+      "sha512": "dryP6nBDWD2aH6OUidwoPQLebelnfA6DDKUs9PxJ6iPDbT9t5eSKyjqLSas/nQFEJZwXXWVnbImrgK/IgiyOdQ==",
+      "files": [
+        "tools/HTML.xslt",
+        "tools/NUnitXml.xslt",
+        "tools/xunit.abstractions.dll",
+        "tools/xunit.console.exe",
+        "tools/xunit.console.exe.config",
+        "tools/xunit.console.x86.exe",
+        "tools/xunit.console.x86.exe.config",
+        "tools/xunit.runner.reporters.desktop.dll",
+        "tools/xunit.runner.utility.desktop.dll",
+        "tools/xUnit1.xslt",
+        "xunit.runner.console.2.1.0.nupkg",
+        "xunit.runner.console.2.1.0.nupkg.sha512",
+        "xunit.runner.console.nuspec"
+      ]
+    },
     "xunit.runner.dnx/2.1.0-beta6-build191": {
       "type": "package",
       "sha512": "+IT2SGBCpHPweDpD4XM8TfhRmt1RqjLAGKAw137gT+t6OoZPtwLduJFbR5BrzpuVmOtwt1gCoR+R3bcuyXFNPQ==",
@@ -6844,6 +6881,7 @@
     "": [
       "xunit >= 2.1.0",
       "xunit.runner.dnx >= 2.1.0-beta6-build191",
+      "xunit.runner.console >= 2.1.0",
       "EmotionAPI >= 1.0.0-*"
     ],
     "DNX,Version=v4.5.1": [],
