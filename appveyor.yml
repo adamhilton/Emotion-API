@@ -14,4 +14,8 @@ before_build:
  - cmd: dnvm list
  - cmd: dnvm use 1.0.0-beta8
  - cmd: dnu restore 
+ 
+test:
+ assemblies:
+   - '**\src\emotionapi.tests\bin\debug\emotionapi.tests.dll'
 
