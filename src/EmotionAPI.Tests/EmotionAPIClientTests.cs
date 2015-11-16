@@ -10,6 +10,7 @@ namespace EmotionAPI.Tests
             var controller = new EmotionAPIClient(mockOcpApimSubscriptionKey);
             Assert.NotNull(controller);
             Assert.NotEmpty(controller.OcpApimSubscriptionKey);
+            Assert.True(false);
         }
     }
 }
