@@ -17,5 +17,5 @@ before_build:
  
 test:
  assemblies:
-   - 'C:\projects\emotion-api\src\EmotionAPI.Tests\bin\Debug\EmotionAPI.Tests.dll'
+   - '**\projects\emotion-api\src\EmotionAPI.Tests\bin\Debug\EmotionAPI.Tests.dll'
 
