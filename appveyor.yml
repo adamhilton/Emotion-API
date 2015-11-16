@@ -15,5 +15,7 @@ before_build:
  - cmd: dnvm use 1.0.0-beta8
  - cmd: dnu restore 
  
-
+test_script:
+ - ps: cd .\src\EmotionAPI.Tests
+ - cmd: dnx test 
 
