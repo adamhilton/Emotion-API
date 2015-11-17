@@ -1,34 +1,34 @@
 ﻿
 using System;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
 namespace EmotionAPI
 {
-    /// <summary>
-    ///     EmotionAPIClient class.
-    /// </summary>
-    /// <seealso cref="EmotionAPI.IEmotionAPIClient"/>
-    public class EmotionAPIClient : IEmotionAPIClient
+    public class EmotionAPIClient
     {
-        /// <summary>
-        ///     Gets or sets OcpApimSubscriptionKey.
-        /// </summary>
-        /// <seealso cref="EmotionAPI.IEmotionAPIClient.OcpApimSubscriptionKey"/>
-        public string OcpApimSubscriptionKey { get; set; }
+        public string OcpApimSubscriptionKey { get; }
 
-        /// <summary>
-        ///     Initializes a new instance of the EmotionAPI.EmotionAPIClient class.
-        /// </summary>
-        /// <param name="ocpApimSubscriptionKey"></param>
         public EmotionAPIClient(string ocpApimSubscriptionKey)
         {
-            this.OcpApimSubscriptionKey = ocpApimSubscriptionKey;
+            OcpApimSubscriptionKey = ocpApimSubscriptionKey;
         }
-
-        public async Task Post (byte[] bytes)
+        
+        public async Task<Result<FaceResult>> Post(string url) 
         {
-            var request = new EmotionAPIRequest(OcpApimSubscriptionKey);
-            await request.Post(bytes);
+            try {
+                if (string.IsNullOrEmpty(url))
+                    return new Result<FaceResult>(null, false, "Url to image must not be null or empty.");
+
+                var response =
+                    await ApiClient.GetResponse(OcpApimSubscriptionKey, new MediaTypeHeaderValue("application/json"));
+
+                return Deserializer.GetResults(response);
+            }
+            catch(Exception ex)
+            {
+                return new Result<FaceResult>(null, false, ex.Message);
+            }
         }
     }
 }
