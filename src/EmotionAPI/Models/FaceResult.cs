@@ -1,29 +1,45 @@
 ﻿
+using Newtonsoft.Json;
+
 namespace EmotionAPI
 {
     public class FaceRectangle
     {
-        public int left { get; set; }
-        public int top { get; set; }
-        public int width { get; set; }
-        public int height { get; set; }
+        [JsonProperty("left")]
+        public int Left { get; set; }
+        [JsonProperty("top")]
+        public int Top { get; set; }
+        [JsonProperty("Width")]
+        public int Width { get; set; }
+        [JsonProperty("Height")]
+        public int Height { get; set; }
     }
 
     public class Scores
     {
-        public double anger { get; set; }
-        public double contempt { get; set; }
-        public double disgust { get; set; }
-        public double fear { get; set; }
-        public double happiness { get; set; }
-        public double neutral { get; set; }
-        public double sadness { get; set; }
-        public double surprise { get; set; }
+        [JsonProperty("anger")]
+        public double Anger { get; set; }
+        [JsonProperty("contempt")]
+        public double Contempt { get; set; }
+        [JsonProperty("disgust")]
+        public double Disgust { get; set; }
+        [JsonProperty("fear")]
+        public double Fear { get; set; }
+        [JsonProperty("happiness")]
+        public double Happiness { get; set; }
+        [JsonProperty("neutral")]
+        public double Neutral { get; set; }
+        [JsonProperty("sadness")]
+        public double Sadness { get; set; }
+        [JsonProperty("surprise")]
+        public double Surprise { get; set; }
     }
 
     public class FaceResult
     {
-        public FaceRectangle faceRectangle { get; set; }
-        public Scores scores { get; set; }
+        [JsonProperty("faceRectangle")]
+        public FaceRectangle FaceRectangle { get; set; }
+        [JsonProperty("scores")]
+        public Scores Scores { get; set; }
     }
 }

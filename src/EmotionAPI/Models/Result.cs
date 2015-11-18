@@ -6,7 +6,7 @@ namespace EmotionAPI
     public struct Result<T>
     {
         public Result(List<T> items, bool success, string message)
-            :this()
+            : this()
         {
             Items = items;
             Success = success;
@@ -19,5 +19,5 @@ namespace EmotionAPI
 
         public bool Success { get; set; }
     }
-    
+
 }

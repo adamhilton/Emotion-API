@@ -1,6 +1,7 @@
 ﻿
-using Newtonsoft.Json.Linq;
-using System.Diagnostics;
+using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.IO;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
@@ -9,22 +10,34 @@ namespace EmotionAPI
 {
     internal class ApiClient
     {
-        public static string BASE_API_URL{ get; } = "https://api.projectoxford.ai/emotion/v1.0/recognize";
+        public static string BASE_API_URL { get; } = "https://api.projectoxford.ai/emotion/v1.0/recognize";
 
-        public static async Task<JObject> GetResponse(string ocpApimSubscriptionKey, MediaTypeHeaderValue contentType, string urlParams = "")
+        public static async Task<List<T>> GetResponse<T>(string ocpApimSubscriptionKey, StringContent bodyContent, MediaTypeHeaderValue contentType, string urlParams = "")
         {
             using (var client = new HttpClient())
             {
-                Trace.WriteLine("<HTTP - GET - " + BASE_API_URL + urlParams + " >");
-
                 HttpRequestMessage requestMessage = new HttpRequestMessage(HttpMethod.Post, BASE_API_URL + urlParams);
+
+                // Set Body
+                requestMessage.Content = bodyContent;
+
+                // Set Headers
                 requestMessage.Content.Headers.ContentType = contentType;
                 requestMessage.Content.Headers.Add("Ocp-Apim-Subscription-Key", ocpApimSubscriptionKey);
 
-                var response = await client.SendAsync(requestMessage);
-                Trace.WriteLine("Response: " + response);
+                // Send request
+                var responseMessage = await client.SendAsync(requestMessage);
+                responseMessage.EnsureSuccessStatusCode();
 
-                return JObject.Parse(response.Content.ToString()); ;
+                string jsonMessage;
+                using (Stream responseStream = await responseMessage.Content.ReadAsStreamAsync())
+                {
+                    jsonMessage = new StreamReader(responseStream).ReadToEnd();
+                }
+
+                var results = (List<T>)JsonConvert.DeserializeObject(jsonMessage, typeof(List<T>));
+
+                return results;
             }
         }
     }
