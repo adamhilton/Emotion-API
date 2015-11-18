@@ -5,7 +5,7 @@
 ###Usage examples
 ```c#
 var client = new EmotionAPIClient("{your_api_key}");
-var response = client.Post();
+var response = client.Post("{image_url}");
 
 foreach(var item in response)
 {
