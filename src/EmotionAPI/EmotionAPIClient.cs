@@ -16,7 +16,7 @@ namespace EmotionAPI
             OcpApimSubscriptionKey = ocpApimSubscriptionKey;
         }
 
-        public async Task<Result<FaceResult>> Post(string url)
+        public async Task<Result<FaceResult>> PostAsync(string url)
         {
             try
             {
