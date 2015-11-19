@@ -30,8 +30,7 @@ namespace EmotionAPI
                         new MediaTypeHeaderValue("application/json"));
 
                 return new Result<FaceResult>(response, true, "SILLY: " + response);
-
-                //return Deserializer.GetResults(response);
+                
             }
             catch (Exception ex)
             {
