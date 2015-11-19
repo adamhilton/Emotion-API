@@ -16,7 +16,5 @@
         "Microsoft.CSharp": "4.0.1-beta-*"
       }
     }
-  },
-  "dependencies": {
   }
 }

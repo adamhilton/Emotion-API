@@ -7,8 +7,7 @@ namespace EmotionAPI.Tests
         public EmotionAPIClient Sut { get; private set; }
 
         public string OcpApimSubscriptionKey { get; private set; } = "12345";
-
-
+        
         public EmotionAPIClientFixture()
         {
             Sut = new EmotionAPIClient(OcpApimSubscriptionKey);

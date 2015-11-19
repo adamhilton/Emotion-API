@@ -12,7 +12,7 @@ namespace EmotionAPI.Tests
         {
             _fixture = fixture;
         }
-
+        
         [Fact]
         [Trait("Category", "Null Checking")]
         public void ShouldNotBeNullEmotionAPIClient()
