@@ -1,23 +1,33 @@
 ﻿using Xunit;
+using Xunit.Abstractions;
 
 namespace EmotionAPI.Tests
 {
-    public class EmotionAPIClientTests : EmotionAPITestsBase
+    public class EmotionAPIClientTests : EmotionAPITestsBase, IClassFixture<EmotionAPIClientFixture>
     {
-        [Fact]
-        public void Can_Create_EmotionAPIClient_Class()
+        private readonly EmotionAPIClientFixture _fixture;
+
+        public EmotionAPIClientTests(ITestOutputHelper helper, EmotionAPIClientFixture fixture)
+            :base(helper)
         {
-            var sut = new EmotionAPIClient(mockOcpApimSubscriptionKey);
-            
-            Assert.NotNull(sut);
+            _fixture = fixture;
         }
 
         [Fact]
-        public void OcpApimSubscriptionKey_Is_Being_Set()
+        [Trait("Category", "Null Checking")]
+        public void ShouldNotBeNullEmotionAPIClient()
         {
-            var sut = new EmotionAPIClient(mockOcpApimSubscriptionKey);
-
-            Assert.NotEmpty(sut.OcpApimSubscriptionKey);
+            _testOutput.WriteLine("Executing ShouldNotBeNullEmotionAPIClient");
+            Assert.NotNull(_fixture);
         }
+
+        [Fact]
+        [Trait("Category", "Null Checking")]
+        public void ShouldNotBeNullOcpApimSubscriptionKey()
+        {
+            _testOutput.WriteLine("Executing ShouldNotBeNullOcpApimSubscriptionKey");
+            Assert.NotNull(_fixture.OcpApimSubscriptionKey);
+        }
+   
     }
 }

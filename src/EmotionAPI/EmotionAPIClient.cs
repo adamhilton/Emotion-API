@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EmotionAPI
 {
-    public class EmotionAPIClient
+    public class EmotionAPIClient : IDisposable
     {
         public string OcpApimSubscriptionKey { get; }
 
@@ -36,6 +36,10 @@ namespace EmotionAPI
             {
                 return new Result<FaceResult>(null, false, ex.Message);
             }
+        }
+
+        public void Dispose()
+        {
         }
     }
 }

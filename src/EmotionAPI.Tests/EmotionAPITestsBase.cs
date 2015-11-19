@@ -1,9 +1,16 @@
 ﻿
+using System;
+using Xunit.Abstractions;
+
 namespace EmotionAPI.Tests
 {
-    public abstract class EmotionAPITestsBase
+    public class EmotionAPITestsBase 
     {
-        public string mockOcpApimSubscriptionKey { get; } = "12345";
-        
+        protected readonly ITestOutputHelper _testOutput;
+
+        public EmotionAPITestsBase(ITestOutputHelper helper)
+        {
+            _testOutput = helper;
+        }
     }
 }
