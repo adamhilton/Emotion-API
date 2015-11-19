@@ -29,7 +29,7 @@ namespace EmotionAPI
                         new StringContent("{\"url\":\"" + url + "\"}", Encoding.UTF8, "application/json"),
                         new MediaTypeHeaderValue("application/json"));
 
-                return new Result<FaceResult>(response, true, "SILLY: " + response);
+                return new Result<FaceResult>(response, true, "Success");
                 
             }
             catch (Exception ex)
