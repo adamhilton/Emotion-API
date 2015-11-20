@@ -3,7 +3,9 @@
 [![License][license-image]][license-url]
 [license-image]: http://img.shields.io/badge/license-MIT-green.svg
 [license-url]: LICENSE
-.Net library that wraps the Microsoft Project Oxford [Emotion API](https://www.projectoxford.ai/doc/Emotion/overview) for easier, simpler use inside your .Net application.
+
+###Summary
+.Net 4.6 class library that wraps the Microsoft Project Oxford [Emotion API](https://www.projectoxford.ai/doc/Emotion/overview) for easier, simpler use inside your .Net application.
 
 ###Usage examples
 ```c#
