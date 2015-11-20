@@ -1,6 +1,6 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/oscx09t7s06sgiqc?svg=true)](https://ci.appveyor.com/project/Felsig/emotion-api/branch/master)
 [![License][license-image]][license-url]
-[license-image]: http://img.shields.io/badge/license-MIT-green.svg?style=flat-square
+[license-image]: http://img.shields.io/badge/license-MIT-green.svg
 [license-url]: LICENSE
 
 # Emotion-API
