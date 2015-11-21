@@ -1,8 +1,12 @@
 ﻿{
-  "version": "1.0.0-*",
-  "description": "EmotionAPI Class Library",
+  "version": "0.0.1",
+  "description": "EmotionAPI is a class library that wraps the Microsoft Project Oxford Emotion API.",
   "authors": [ "Adam Hilton" ],
-  "tags": [ "" ],
+  "tags": [ "Microsoft", "Emotion", "API", "Wrapper" ],
+  "repository": {
+    "type": "git",
+     "url": "https://github.com/Felsig/Emotion-API"
+  },
   "projectUrl": "https://github.com/Felsig/Emotion-API",
   "licenseUrl": "https://github.com/Felsig/Emotion-API/blob/master/LICENSE",
 
