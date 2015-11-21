@@ -10,7 +10,7 @@
 ###Usage examples
 ```c#
 var client = new EmotionAPIClient("{your_api_key}");
-var response = client.Post("{image_url}");
+var response = client.PostAsync("{image_url || image_bytes}");
 
 foreach(var item in response)
 {
