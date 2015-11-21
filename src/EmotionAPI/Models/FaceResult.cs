@@ -1,5 +1,6 @@
-﻿
+﻿#region
 using Newtonsoft.Json;
+#endregion
 
 namespace EmotionAPI
 {
