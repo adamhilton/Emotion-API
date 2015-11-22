@@ -42,7 +42,7 @@ namespace EmotionAPI
                         new StringContent("{\"url\":\"" + url + "\"}", Encoding.UTF8, "application/json"),
                         new MediaTypeHeaderValue("application/json"));
 
-                return new Result<FaceResult>(response, true, "Success");
+                return response;
                 
             }
             catch (Exception ex)
@@ -69,7 +69,7 @@ namespace EmotionAPI
                         new ByteArrayContent(bytes),
                         new MediaTypeHeaderValue("application/octet-stream"));
 
-                return new Result<FaceResult>(response, true, "Success");
+                return response;
 
             }
             catch (Exception ex)

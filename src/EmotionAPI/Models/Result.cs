@@ -1,4 +1,5 @@
 ﻿#region
+using Newtonsoft.Json;
 using System.Collections.Generic;
 #endregion
 
@@ -16,7 +17,11 @@ namespace EmotionAPI
 
         public List<T> Items { get; set; }
 
+        [JsonProperty("message")]
         public string Message { get; set; }
+
+        [JsonProperty("statusCode")]
+        public int statusCode { get; set; }
 
         public bool Success { get; set; }
     }

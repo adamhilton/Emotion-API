@@ -1,5 +1,5 @@
 ﻿{
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "EmotionAPI is a class library that wraps the Microsoft Project Oxford Emotion API.",
   "authors": [ "Adam Hilton" ],
   "tags": [ "Microsoft", "Emotion", "API", "Wrapper" ],
