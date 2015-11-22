@@ -10,9 +10,9 @@ namespace EmotionAPI
         public int Left { get; set; }
         [JsonProperty("top")]
         public int Top { get; set; }
-        [JsonProperty("Width")]
+        [JsonProperty("width")]
         public int Width { get; set; }
-        [JsonProperty("Height")]
+        [JsonProperty("height")]
         public int Height { get; set; }
     }
 
