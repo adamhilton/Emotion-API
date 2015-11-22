@@ -9,7 +9,7 @@
   "dependencies": {
     "xunit": "2.1.0",
     "xunit.runner.dnx": "2.1.0-rc1-*",
-    "EmotionAPI": "*"
+    "EmotionAPI": "0.1.*"
   },
   "commands": {
     "test": "xunit.runner.dnx"
