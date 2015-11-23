@@ -1,4 +1,6 @@
 # .Net EmotionAPI
+
+[![Join the chat at https://gitter.im/Felsig/Emotion-API](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Felsig/Emotion-API?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build status](https://img.shields.io/appveyor/ci/felsig/emotion-api/master.svg?style=flat-square)](https://ci.appveyor.com/project/Felsig/emotion-api/branch/master)
 [![NuGet Version](http://img.shields.io/nuget/v/EmotionAPI.svg?style=flat-square)](https://www.nuget.org/packages/EmotionAPI/)
 [![License][license-image]][license-url]
