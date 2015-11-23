@@ -1,4 +1,4 @@
-# .Net EmotionAPI
+# ASP.NET 5 EmotionAPI
 [![Build status](https://img.shields.io/appveyor/ci/felsig/emotion-api/master.svg?style=flat-square)](https://ci.appveyor.com/project/Felsig/emotion-api/branch/master)
 [![NuGet Version](http://img.shields.io/nuget/v/EmotionAPI.svg?style=flat-square)](https://www.nuget.org/packages/EmotionAPI/)
 [![License][license-image]][license-url]
@@ -6,7 +6,7 @@
 [license-url]: LICENSE
 
 ## Summary
-.Net class library that wraps the Microsoft Project Oxford [Emotion API](https://www.projectoxford.ai/doc/Emotion/overview) for easier, simpler use inside your .Net application.
+ASP.NET 5 class library that wraps the Microsoft Project Oxford [Emotion API](https://www.projectoxford.ai/doc/Emotion/overview) for easier, simpler use inside your .Net application.
 
 ## Get it on NuGet!
     Install-Package EmotionAPI
