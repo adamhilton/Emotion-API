@@ -28,6 +28,18 @@ namespace EmotionAPI.Tests
             _testOutput.WriteLine("Executing ShouldNotBeNullOcpApimSubscriptionKey");
             Assert.NotNull(_fixture.OcpApimSubscriptionKey);
         }
-   
+  
+        [Fact]
+        [Trait("Category", "Value Checking")]
+        public async void ShouldPostAsyncAndReturnFaceResultItems()
+        {
+            _testOutput.WriteLine("Executing ShouldPostAsyncAndReturnCorrectResults");
+            var result = await _fixture.Sut.PostAsync("cleverUrl");
+
+            //Correct number of face results is 2
+            Assert.NotEqual(1, result.Items.Count);
+            Assert.Equal(2, result.Items.Count);
+            Assert.NotEqual(3, result.Items.Count);
+        }
     }
 }
