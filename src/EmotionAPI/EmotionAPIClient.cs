@@ -13,7 +13,19 @@ namespace EmotionAPI
     /// </summary>
     public class EmotionAPIClient : IDisposable
     {
+        private HttpClient _apiHttpClient;
+
         public string OcpApimSubscriptionKey { get; }
+        
+        public HttpClient ApiHttpClient
+        {
+            get
+            {
+                if (_apiHttpClient == null)
+                    _apiHttpClient = new HttpClient();
+                return _apiHttpClient;
+            }
+        }
 
         /// <summary>
         ///     Constructor for the EmotionAPIClient class.
@@ -22,6 +34,17 @@ namespace EmotionAPI
         public EmotionAPIClient(string ocpApimSubscriptionKey)
         {
             OcpApimSubscriptionKey = ocpApimSubscriptionKey;
+        }
+
+        /// <summary>
+        ///     Constructor for the EmotionAPIClient class.
+        /// </summary>
+        /// <param name="ocpApimSubscriptionKey">Ocp Api Subscription Key used to access the API</param>
+        /// <param name="httpClient">Pass in an HttpClient class to replace the one used here</param>
+        public EmotionAPIClient(string ocpApimSubscriptionKey, HttpClient httpClient)
+        {
+            OcpApimSubscriptionKey = ocpApimSubscriptionKey;
+            _apiHttpClient = httpClient;
         }
 
         /// <summary>
@@ -37,13 +60,13 @@ namespace EmotionAPI
                     return new Result<FaceResult>(null, false, "Url to image must not be null or empty.");
 
                 var response =
-                    await ApiClient.GetResponse<FaceResult>(
+                    await new ApiClient(ApiHttpClient).GetResponse<FaceResult>(
                         OcpApimSubscriptionKey,
                         new StringContent("{\"url\":\"" + url + "\"}", Encoding.UTF8, "application/json"),
                         new MediaTypeHeaderValue("application/json"));
 
                 return response;
-                
+
             }
             catch (Exception ex)
             {
@@ -64,7 +87,7 @@ namespace EmotionAPI
                     return new Result<FaceResult>(null, false, "Image bytes must not be null.");
 
                 var response =
-                    await ApiClient.GetResponse<FaceResult>(
+                    await new ApiClient(ApiHttpClient).GetResponse<FaceResult>(
                         OcpApimSubscriptionKey,
                         new ByteArrayContent(bytes),
                         new MediaTypeHeaderValue("application/octet-stream"));
