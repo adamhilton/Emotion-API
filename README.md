@@ -1,8 +1,8 @@
 # .Net EmotionAPI
-[![Build status](https://ci.appveyor.com/api/projects/status/oscx09t7s06sgiqc?svg=true)](https://ci.appveyor.com/project/Felsig/emotion-api/branch/master)
-[![NuGet Version](http://img.shields.io/nuget/v/EmotionAPI.svg?style=flat)](https://www.nuget.org/packages/EmotionAPI/)
+[![Build status](https://img.shields.io/appveyor/ci/felsig/emotion-api/master.svg?style=flat-square)](https://ci.appveyor.com/project/Felsig/emotion-api/branch/master)
+[![NuGet Version](http://img.shields.io/nuget/v/EmotionAPI.svg?style=flat-square)](https://www.nuget.org/packages/EmotionAPI/)
 [![License][license-image]][license-url]
-[license-image]: http://img.shields.io/badge/license-MIT-green.svg
+[license-image]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
 [license-url]: LICENSE
 
 ## Summary
