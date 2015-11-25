@@ -1,5 +1,6 @@
 ﻿#region
 using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -51,8 +52,10 @@ namespace EmotionAPI
         ///     Asynchronous method that posts to the API.
         /// </summary>
         /// <param name="url">Url of the image that shall be analyzed</param>
+        /// <param name="faceRectangles">Api will only search for face in specified face rectangles provided</param>
         /// <returns>Returns the results of the analyzed faces.</returns>
-        public async Task<Result<FaceResult>> PostAsync(string url)
+        /// <seealso cref="EmotionAPI.FaceRectangle"/>
+        public async Task<Result<FaceResult>> PostAsync(string url, List<FaceRectangle> faceRectangles = null)
         {
             try
             {
@@ -60,7 +63,7 @@ namespace EmotionAPI
                     return new Result<FaceResult>(null, false, "Url to image must not be null or empty.");
 
                 var response =
-                    await new ApiClient(ApiHttpClient).GetResponse<FaceResult>(
+                    await new ApiClient(ApiHttpClient, faceRectangles).GetResponse<FaceResult>(
                         OcpApimSubscriptionKey,
                         new StringContent("{\"url\":\"" + url + "\"}", Encoding.UTF8, "application/json"),
                         new MediaTypeHeaderValue("application/json"));
@@ -78,8 +81,10 @@ namespace EmotionAPI
         ///     Asynchronous method that posts to the API.
         /// </summary>
         /// <param name="bytes">Bytes of the image that shall be analyzed</param>
+        /// <param name="faceRectangles">Api will only search for face in specified face rectangles provided</param>
         /// <returns>Returns the results of the analyzed faces.</returns>
-        public async Task<Result<FaceResult>> PostAsync(byte[] bytes)
+        /// <seealso cref="EmotionAPI.FaceRectangle"/>
+        public async Task<Result<FaceResult>> PostAsync(byte[] bytes, List<FaceRectangle> faceRectangles = null)
         {
             try
             {
@@ -87,7 +92,7 @@ namespace EmotionAPI
                     return new Result<FaceResult>(null, false, "Image bytes must not be null.");
 
                 var response =
-                    await new ApiClient(ApiHttpClient).GetResponse<FaceResult>(
+                    await new ApiClient(ApiHttpClient, faceRectangles).GetResponse<FaceResult>(
                         OcpApimSubscriptionKey,
                         new ByteArrayContent(bytes),
                         new MediaTypeHeaderValue("application/octet-stream"));

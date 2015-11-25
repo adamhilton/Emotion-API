@@ -3,6 +3,25 @@
   "version": 2,
   "targets": {
     "DNX,Version=v4.5.1": {
+      "Microsoft.AspNet.WebUtilities/1.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "1.0.0-rc1-final",
+          "Microsoft.Extensions.WebEncoders.Core": "1.0.0-rc1-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.AspNet.WebUtilities.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.AspNet.WebUtilities.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.1-beta-23516": {
         "type": "package",
         "frameworkAssemblies": [
@@ -13,6 +32,36 @@
         },
         "runtime": {
           "lib/net45/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Primitives/1.0.0-rc1-final": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.Extensions.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.Extensions.Primitives.dll": {}
+        }
+      },
+      "Microsoft.Extensions.WebEncoders.Core/1.0.0-rc1-final": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.Extensions.WebEncoders.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.Extensions.WebEncoders.Core.dll": {}
         }
       },
       "Newtonsoft.Json/7.0.1": {
@@ -56,6 +105,25 @@
       }
     },
     "DNX,Version=v4.5.1/win7-x86": {
+      "Microsoft.AspNet.WebUtilities/1.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "1.0.0-rc1-final",
+          "Microsoft.Extensions.WebEncoders.Core": "1.0.0-rc1-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.AspNet.WebUtilities.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.AspNet.WebUtilities.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.1-beta-23516": {
         "type": "package",
         "frameworkAssemblies": [
@@ -66,6 +134,36 @@
         },
         "runtime": {
           "lib/net45/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Primitives/1.0.0-rc1-final": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.Extensions.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.Extensions.Primitives.dll": {}
+        }
+      },
+      "Microsoft.Extensions.WebEncoders.Core/1.0.0-rc1-final": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.Extensions.WebEncoders.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.Extensions.WebEncoders.Core.dll": {}
         }
       },
       "Newtonsoft.Json/7.0.1": {
@@ -115,6 +213,25 @@
       }
     },
     "DNX,Version=v4.5.1/win7-x64": {
+      "Microsoft.AspNet.WebUtilities/1.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "1.0.0-rc1-final",
+          "Microsoft.Extensions.WebEncoders.Core": "1.0.0-rc1-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.AspNet.WebUtilities.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.AspNet.WebUtilities.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.1-beta-23516": {
         "type": "package",
         "frameworkAssemblies": [
@@ -125,6 +242,36 @@
         },
         "runtime": {
           "lib/net45/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Primitives/1.0.0-rc1-final": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.Extensions.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.Extensions.Primitives.dll": {}
+        }
+      },
+      "Microsoft.Extensions.WebEncoders.Core/1.0.0-rc1-final": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.Extensions.WebEncoders.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.Extensions.WebEncoders.Core.dll": {}
         }
       },
       "Newtonsoft.Json/7.0.1": {
@@ -175,6 +322,20 @@
     }
   },
   "libraries": {
+    "Microsoft.AspNet.WebUtilities/1.0.0-rc1-final": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "0D80xroAEiWlB9X5eR/JUya1H2saIYnt4d7bPru5RRf5L/66X+9WWhf3hFkLUF3W13K6g6K9Is9dCTaEfFFKTA==",
+      "files": [
+        "lib/dotnet5.4/Microsoft.AspNet.WebUtilities.dll",
+        "lib/dotnet5.4/Microsoft.AspNet.WebUtilities.xml",
+        "lib/net451/Microsoft.AspNet.WebUtilities.dll",
+        "lib/net451/Microsoft.AspNet.WebUtilities.xml",
+        "Microsoft.AspNet.WebUtilities.1.0.0-rc1-final.nupkg",
+        "Microsoft.AspNet.WebUtilities.1.0.0-rc1-final.nupkg.sha512",
+        "Microsoft.AspNet.WebUtilities.nuspec"
+      ]
+    },
     "Microsoft.CSharp/4.0.1-beta-23516": {
       "type": "package",
       "serviceable": true,
@@ -223,6 +384,36 @@
         "ref/wpa81/_._",
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._"
+      ]
+    },
+    "Microsoft.Extensions.Primitives/1.0.0-rc1-final": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "oHWqBARJveyM7LctuqQqvsTC58hxoq0gGnHr6Qsxie71LIkZpfE21IklhSLOsqmv4QIpes/G6k1vZbAQ+cC/nw==",
+      "files": [
+        "lib/dotnet5.4/Microsoft.Extensions.Primitives.dll",
+        "lib/dotnet5.4/Microsoft.Extensions.Primitives.xml",
+        "lib/net451/Microsoft.Extensions.Primitives.dll",
+        "lib/net451/Microsoft.Extensions.Primitives.xml",
+        "lib/netcore50/Microsoft.Extensions.Primitives.dll",
+        "lib/netcore50/Microsoft.Extensions.Primitives.xml",
+        "Microsoft.Extensions.Primitives.1.0.0-rc1-final.nupkg",
+        "Microsoft.Extensions.Primitives.1.0.0-rc1-final.nupkg.sha512",
+        "Microsoft.Extensions.Primitives.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.WebEncoders.Core/1.0.0-rc1-final": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "wt47w3Zu7JvuD7CfRSCaz0IZL5EzpuzicRm6Qcidteb2TVeB98Psg7YGiwIBeYB1b52YFTBgqC+ySKk/GRhy2A==",
+      "files": [
+        "lib/dotnet5.4/Microsoft.Extensions.WebEncoders.Core.dll",
+        "lib/dotnet5.4/Microsoft.Extensions.WebEncoders.Core.xml",
+        "lib/net451/Microsoft.Extensions.WebEncoders.Core.dll",
+        "lib/net451/Microsoft.Extensions.WebEncoders.Core.xml",
+        "Microsoft.Extensions.WebEncoders.Core.1.0.0-rc1-final.nupkg",
+        "Microsoft.Extensions.WebEncoders.Core.1.0.0-rc1-final.nupkg.sha512",
+        "Microsoft.Extensions.WebEncoders.Core.nuspec"
       ]
     },
     "Newtonsoft.Json/7.0.1": {
@@ -340,7 +531,8 @@
       "System.Net.Http >= 4.0.1-beta-23409",
       "System.Runtime >= 4.0.10-beta-23019",
       "Newtonsoft.Json >= 7.0.1",
-      "Microsoft.CSharp >= 4.0.1-beta-*"
+      "Microsoft.CSharp >= 4.0.1-beta-*",
+      "Microsoft.AspNet.WebUtilities >= 1.0.0-rc1-final"
     ]
   }
 }
