@@ -20,7 +20,7 @@ namespace EmotionAPI.Tests
             _testOutput.WriteLine("Executing ShouldNotBeNullEmotionAPIClient");
             Assert.NotNull(_fixture);
         }
-
+        
         [Fact]
         [Trait("Category", "Null Checking")]
         public void ShouldNotBeNullOcpApimSubscriptionKey()
